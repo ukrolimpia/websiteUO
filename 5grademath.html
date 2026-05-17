@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkrOlimpia — Математика 5 клас</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Додаткові стилі для зручної навігації всередині сторінки */
+        .content-wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        /* Бокове меню навігації по розділах */
+        .sidebar-menu {
+            position: sticky;
+            top: 20px;
+            width: 300px;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .sidebar-menu h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-menu ul {
+            list-style: none;
+        }
+
+        .sidebar-menu ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar-menu ul li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .sidebar-menu ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Область з теоретичним матеріалом */
+        .theory-content {
+            flex: 1;
+        }
+
+        .theory-section {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .theory-section h2 {
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .theory-section h3 {
+            color: var(--secondary-dark);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        /* Стилізація математичних блоків та формул */
+        .math-block {
+            background-color: var(--bg-color);
+            border-left: 4px solid var(--primary-dark);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .formula {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            text-align: center;
+            margin: 1rem 0;
+            letter-spacing: 1px;
+        }
+
+        .math-block ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .example-box {
+            background-color: #fef3c7; /* Легкий золотавий відтінок для прикладів */
+            border-left: 4px solid var(--accent-gold);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Плавний скролл при натисканні на посилання */
+        }
+
+        @media (max-width: 900px) {
+            .content-wrapper { flex-direction: column; }
+            .sidebar-menu { width: 100%; position: static; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Математика — <span>5 клас</span></h1>
+            <p>Програма поглибленої підготовки до математичних олімпіад. Логіка, теорія чисел та нестандартні методи розв'язання.</p>
+            <a href="math.html" class="btn-back">← Назад до вибору класів</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            
+            <nav class="sidebar-menu">
+                <h3>Зміст програми:</h3>
+                <ul>
+                    <li><a href="#section1">1. Теорія чисел та арифметика</a></li>
+                    <li><a href="#section2">2. Комбінаторний аналіз</a></li>
+                    <li><a href="#section3">3. Наочна олімпіадна геометрія</a></li>
+                    <li><a href="#section4">4. Математична логіка та стратегії</a></li>
+                    <li><a href="#section5">5. Текстові задачі та спеціальні методи</a></li>
+                </ul>
+            </nav>
+
+            <div class="theory-content">
+
+                <section id="section1" class="theory-section">
+                    <h2>1. Теорія чисел та арифметика</h2>
+                    <p>Цей розділ вивчає приховані властивості звичайних цілих чисел, правила їх подільності та роботу з остачами.</p>
+                    
+                    <h3>Конгруентність (Порівняння за модулем)</h3>
+                    <p>В олімпіадній математиці замість довгого запису "число при діленні на щось дає остачу" використовують поняття <strong>конгруентності</strong> (або порівняння за модулем). Для цього використовують спеціальний значок із трьох ліній: <strong>≡</strong>.</p>
+                    
+                    <div class="math-block">
+                        <div class="formula">n ≡ x (mod p)</div>
+                        <strong>Де розшифровка елементів виглядає так:</strong>
+                        <ul>
+                            <li><strong>p</strong> — модуль (будь-яке ціле число, на яке ми ділимо).</li>
+                            <li><strong>n</strong> — число, яке ми досліджуємо (ділене).</li>
+                            <li><strong>x</strong> — це та частина числа n, яка при діленні на p не поділилася націло. Тобто <strong>х — це остача</strong> ($0 \le x < p$).</li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Приклад 1:</strong> Запис <code>17 ≡ 2 (mod 5)</code> читається як: "17 конгруентне 2 за модулем 5". Це означає, що число 17 при діленні на 5 дає в остачі 2 (дійсно: 17 = 3 * 5 + 2).
+                    </div>
+                    <div class="example-box">
+                        <strong>Приклад 2:</strong> <code>26 ≡ 2 (mod 4)</code>. Число 26 при діленні на 4 дає остачу 2 (бо 24 ділиться націло, а 2 залишається).
+                    </div>
+
+                    <h3>Інші теми розділу:</h3>
+                    <ul>
+                        <li>Ознаки подільності чисел (на 2, 3, 4, 5, 9, 11, 25).</li>
+                        <li>Властивості парності та її застосування в задачах-іграх.</li>
+                        <li>Математичні ребуси та відновлення зашифрованих записів.</li>
+                    </ul>
+                </section>
+
+                <section id="section2" class="theory-section">
+                    <h2>2. Комбінаторний аналіз</h2>
+                    <p>Розділ присвячений підрахунку кількості можливих варіантів, комбінацій та способів розташування об'єктів за певними правилами.</p>
+                    <h3>Основні підтеми для вивчення:</h3>
+                    <ul>
+                        <li>Правило суми та правило добутку в комбінаториці.</li>
+                        <li>Поняття про перестановки (розміщення друзів на лавці, складання слів).</li>
+                        <li><strong>Принцип Діріхле</strong> ("Зайці та клітки") та його застосування до доведення тверджень.</li>
+                        <li>Шахове розфарбовування та защення поверхонь фігурами.</li>
+                    </ul>
+                </section>
+
+                <section id="section3" class="theory-section">
+                    <h2>3. Наочна олімпіадна геометрія</h2>
+                    <p>Геометрія у 5 класі будується без складних теорем та тригонометрії. Головне тут — просторова уява, логіка розрізання та вміння бачити форму об'єктів.</p>
+                    <h3>Основні підтеми для вивчення:</h3>
+                    <ul>
+                        <li>Задачі на розрізання фігур на рівні частини та складання нових форм.</li>
+                        <li>Обчислення складних периметрів та площ фігур, склеєних із прямокутників.</li>
+                        <li>Просторові операції: розгортки куба, підрахунок елементів тривимірних конструкцій.</li>
+                    </ul>
+                </section>
+
+                <section id="section4" class="theory-section">
+                    <h2>4. Математична логіка та стратегії</h2>
+                    <p>Вчить мислити послідовно, будувати ланцюжки істинних тверджень та знаходити безпрограшні алгоритми в іграх.</p>
+                    <h3>Основні підтеми для вивчення:</h3>
+                    <ul>
+                        <li>Задачі на логіку типу "Лицарі та брехуни".</li>
+                        <li>Ігрові олімпіадні стратегії (метод симетрії, доповнення до виграшного числа).</li>
+                        <li>Табличний метод розв'язання текстових логічних задач із багатьма умовами.</li>
+                    </ul>
+                </section>
+
+                <section id="section5" class="theory-section">
+                    <h2>5. Текстові задачі та спеціальні методи</h2>
+                    <p>Розбір складних текстових сюжетів за допомогою олімпіадних підходів, які набагато ефективніші за стандартні шкільні рівняння з "іксами".</p>
+                    <h3>Основні підтеми для вивчення:</h3>
+                    <ul>
+                        <li>Аналіз руху: за течією та проти неї, задачі на зближення та навздогін.</li>
+                        <li>Метод "з кінця" (розплутування ланцюжка виконаних операцій у зворотному порядку).</li>
+                        <li>Задачі на переливання рідин за допомогою обмежених ємностей та зважування на терезах без гир.</li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UkrOlimpia. Зроблено з коханням до науки.</p>
+    </footer>
+
+</body>
+</html>
